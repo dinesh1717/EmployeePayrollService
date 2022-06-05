@@ -50,6 +50,8 @@ public class EmployeePayrollController {
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 
+
+    
     @DeleteMapping("/delete/{empId}")
     public ResponseEntity<ResponseDTO> deleteEmployeePayrollData(@PathVariable("empId") int empId) {
         EmployeePayrollData employeePayrollData = null;
