@@ -1,5 +1,5 @@
 package com.bridgelabz.employeepayroll;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -8,6 +8,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
+@Slf4j
 @EnableSwagger2
 public class EmployeePayrollApplication {
 
@@ -17,7 +18,9 @@ public class EmployeePayrollApplication {
         }
         System.out.println("Welcome To Employee PayRoll Service Application");
         SpringApplication.run(EmployeePayrollApplication.class, args);
+        log.info("Employee Payroll Application started");
     }
+
 
     @Bean
     public Docket productApi() {
