@@ -1,0 +1,196 @@
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.20.jar:5.3.20]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.EmpPayrollServiceAppApplication.main(EmpPayrollServiceAppApplication.java:20) ~[classes/:na]
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
+	at com.google.common.collect.ComparatorOrdering.compare(ComparatorOrdering.java:37) ~[guava-20.0.jar:na]
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355) ~[na:na]
+	at java.base/java.util.TimSort.sort(TimSort.java:220) ~[na:na]
+	at java.base/java.util.Arrays.sort(Arrays.java:1441) ~[na:na]
+	at com.google.common.collect.Ordering.sortedCopy(Ordering.java:855) ~[guava-20.0.jar:na]
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:57) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:138) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:135) ~[springfox-spring-web-2.9.2.jar:null]
+	at com.google.common.collect.Iterators$7.transform(Iterators.java:750) ~[guava-20.0.jar:na]
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47) ~[guava-20.0.jar:na]
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47) ~[guava-20.0.jar:na]
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:52) ~[guava-20.0.jar:na]
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:50) ~[guava-20.0.jar:na]
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:249) ~[guava-20.0.jar:na]
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:209) ~[guava-20.0.jar:na]
+	at com.google.common.collect.FluentIterable.toList(FluentIterable.java:614) ~[guava-20.0.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.defaultContextBuilder(DocumentationPluginsBootstrapper.java:111) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.buildContext(DocumentationPluginsBootstrapper.java:96) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167) ~[springfox-spring-web-2.9.2.jar:null]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.20.jar:5.3.20]
+	... 14 common frames omitted
+
+2022-06-05 11:05:38.351  INFO 1424 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Starting EmpPayrollServiceAppApplication using Java 11.0.15 on DESKTOP-F0VCATA with PID 1424 (E:\CFP\SpringBootProjects\EmpPayrollServiceApp\target\classes started by Ritesh in E:\CFP\SpringBootProjects\EmpPayrollServiceApp)
+2022-06-05 11:05:38.362 DEBUG 1424 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-05 11:05:38.365  INFO 1424 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : The following 1 profile is active: "DEV"
+2022-06-05 11:05:51.885  WARN 1424 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-05 11:05:54.008  WARN 1424 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2022-06-05 11:05:54.539 ERROR 1424 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.20.jar:5.3.20]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.EmpPayrollServiceAppApplication.main(EmpPayrollServiceAppApplication.java:20) ~[classes/:na]
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
+	at com.google.common.collect.ComparatorOrdering.compare(ComparatorOrdering.java:37) ~[guava-20.0.jar:na]
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355) ~[na:na]
+	at java.base/java.util.TimSort.sort(TimSort.java:220) ~[na:na]
+	at java.base/java.util.Arrays.sort(Arrays.java:1441) ~[na:na]
+	at com.google.common.collect.Ordering.sortedCopy(Ordering.java:855) ~[guava-20.0.jar:na]
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:57) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:138) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:135) ~[springfox-spring-web-2.9.2.jar:null]
+	at com.google.common.collect.Iterators$7.transform(Iterators.java:750) ~[guava-20.0.jar:na]
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47) ~[guava-20.0.jar:na]
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47) ~[guava-20.0.jar:na]
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:52) ~[guava-20.0.jar:na]
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:50) ~[guava-20.0.jar:na]
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:249) ~[guava-20.0.jar:na]
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:209) ~[guava-20.0.jar:na]
+	at com.google.common.collect.FluentIterable.toList(FluentIterable.java:614) ~[guava-20.0.jar:na]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.defaultContextBuilder(DocumentationPluginsBootstrapper.java:111) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.buildContext(DocumentationPluginsBootstrapper.java:96) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167) ~[springfox-spring-web-2.9.2.jar:null]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.20.jar:5.3.20]
+	... 14 common frames omitted
+
+2022-06-05 11:14:15.361  INFO 11048 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Starting EmpPayrollServiceAppApplication using Java 11.0.15 on DESKTOP-F0VCATA with PID 11048 (E:\CFP\SpringBootProjects\EmpPayrollServiceApp\target\classes started by Ritesh in E:\CFP\SpringBootProjects\EmpPayrollServiceApp)
+2022-06-05 11:14:15.391 DEBUG 11048 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-05 11:14:15.393  INFO 11048 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : The following 1 profile is active: "DEV"
+2022-06-05 11:14:27.882  WARN 11048 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-05 11:14:30.354  INFO 11048 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Started EmpPayrollServiceAppApplication in 17.092 seconds (JVM running for 18.718)
+2022-06-05 11:14:30.365  INFO 11048 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll Application started
+2022-06-05 11:17:11.134 ERROR 11048 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0] with root cause
+
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[na:na]
+	at java.base/java.util.Objects.checkIndex(Objects.java:372) ~[na:na]
+	at java.base/java.util.ArrayList.get(ArrayList.java:459) ~[na:na]
+	at com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.services.EmployeePayrollService.getEmployeePayrollDataById(EmployeePayrollService.java:37) ~[classes/:na]
+	at com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.controllers.EmployeePayrollController.getEmployeePayrollData(EmployeePayrollController.java:47) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.63.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.63.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-06-05 11:44:01.535  INFO 444 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Starting EmpPayrollServiceAppApplication using Java 11.0.15 on DESKTOP-F0VCATA with PID 444 (E:\CFP\SpringBootProjects\EmpPayrollServiceApp\target\classes started by Ritesh in E:\CFP\SpringBootProjects\EmpPayrollServiceApp)
+2022-06-05 11:44:01.544 DEBUG 444 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-05 11:44:01.546  INFO 444 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : The following 1 profile is active: "DEV"
+2022-06-05 11:44:13.742  WARN 444 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-05 11:44:16.345  INFO 444 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Started EmpPayrollServiceAppApplication in 16.323 seconds (JVM running for 17.782)
+2022-06-05 11:44:16.356  INFO 444 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll Application started
+2022-06-05 15:35:40.858  WARN 444 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h29s191ms105µs684ns).
+2022-06-05 17:19:41.868  WARN 444 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h44m12s563ms237µs425ns).
+2022-06-05 17:41:24.148  INFO 10920 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Starting EmpPayrollServiceAppApplication using Java 11.0.15 on DESKTOP-F0VCATA with PID 10920 (E:\CFP\SpringBootProjects\EmpPayrollServiceApp\target\classes started by Ritesh in E:\CFP\SpringBootProjects\EmpPayrollServiceApp)
+2022-06-05 17:41:24.159 DEBUG 10920 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-05 17:41:24.162  INFO 10920 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : The following 1 profile is active: "DEV"
+2022-06-05 17:41:37.814  WARN 10920 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-05 17:41:40.692  INFO 10920 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Started EmpPayrollServiceAppApplication in 18.413 seconds (JVM running for 20.452)
+2022-06-05 17:41:40.704  INFO 10920 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll App Started in DEV Environment
+2022-06-05 17:41:40.710  INFO 10920 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll DB User is root
+2022-06-05 18:16:38.102  INFO 476 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Starting EmpPayrollServiceAppApplication using Java 11.0.15 on DESKTOP-F0VCATA with PID 476 (E:\CFP\SpringBootProjects\EmpPayrollServiceApp\target\classes started by Ritesh in E:\CFP\SpringBootProjects\EmpPayrollServiceApp)
+2022-06-05 18:16:38.113 DEBUG 476 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-05 18:16:38.119  INFO 476 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : The following 1 profile is active: "DEV"
+2022-06-05 18:16:51.149  WARN 476 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-05 18:16:53.759  INFO 476 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Started EmpPayrollServiceAppApplication in 17.777 seconds (JVM running for 19.339)
+2022-06-05 18:16:53.770  INFO 476 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll App Started in DEV Environment
+2022-06-05 18:16:53.778  INFO 476 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll DB User is root
+2022-06-05 18:25:24.016  WARN 476 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.dto.ResponseDTO> com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.controllers.EmployeePayrollController.createEmployeePayrollData(com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'name': rejected value [nilesh]; codes [Pattern.employeePayrollDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@798db09c,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee name is Invalid]] ]
+2022-06-05 18:26:25.500  WARN 476 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.dto.ResponseDTO> com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.controllers.EmployeePayrollController.updateEmployeePayrollData(int,com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.dto.EmployeePayrollDTO)]
+2022-06-05 18:28:20.674  WARN 476 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.dto.ResponseDTO> com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.controllers.EmployeePayrollController.createEmployeePayrollData(com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'name': rejected value [ramesh]; codes [Pattern.employeePayrollDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@798db09c,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee name is Invalid]] ]
+2022-06-05 19:29:28.222  WARN 476 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59m39s230ms375µs584ns).
+2022-06-05 20:18:28.414  INFO 11288 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Starting EmpPayrollServiceAppApplication using Java 11.0.15 on DESKTOP-F0VCATA with PID 11288 (E:\CFP\SpringBootProjects\EmpPayrollServiceApp\target\classes started by Ritesh in E:\CFP\SpringBootProjects\EmpPayrollServiceApp)
+2022-06-05 20:18:28.421 DEBUG 11288 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-05 20:18:28.423  INFO 11288 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : The following 1 profile is active: "DEV"
+2022-06-05 20:18:38.032  WARN 11288 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-05 20:18:39.997  INFO 11288 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Started EmpPayrollServiceAppApplication in 12.837 seconds (JVM running for 14.186)
+2022-06-05 20:18:40.010  INFO 11288 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll App Started in DEV Environment
+2022-06-05 20:18:40.017  INFO 11288 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll DB User is root
+2022-06-05 20:55:42.796  INFO 12448 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Starting EmpPayrollServiceAppApplication using Java 11.0.15 on DESKTOP-F0VCATA with PID 12448 (E:\CFP\SpringBootProjects\EmpPayrollServiceApp\target\classes started by Ritesh in E:\CFP\SpringBootProjects\EmpPayrollServiceApp)
+2022-06-05 20:55:42.804 DEBUG 12448 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-05 20:55:42.805  INFO 12448 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : The following 1 profile is active: "DEV"
+2022-06-05 20:55:52.803  WARN 12448 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-05 20:55:54.911  INFO 12448 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Started EmpPayrollServiceAppApplication in 13.362 seconds (JVM running for 14.546)
+2022-06-05 20:55:54.922  INFO 12448 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll App Started in DEV Environment
+2022-06-05 20:55:54.928  INFO 12448 --- [main] c.b.e.E.EmpPayrollServiceAppApplication  : Employee Payroll DB User is root
