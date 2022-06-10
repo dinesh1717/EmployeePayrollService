@@ -48,22 +48,6 @@ public class EmployeePayrollController {
     }
 
     /**
-     * Method :- Method to Get the Employee Payroll Data Using Department.
-     *
-     * passing Department As Input
-     * @return :- Returning ResponseDTO Object.
-     */
-
-    @GetMapping("/department/{department}")
-    public ResponseEntity<ResponseDTO> getEmployeeByDepartment(@PathVariable("department") String department) {
-
-        List<EmployeePayrollData> employeeList = null;
-        employeeList = employeePayrollService.getEmployeesPayrollDataByDepartment(department);
-        ResponseDTO response = new ResponseDTO("Get Call for Department Successful", employeeList);
-        return new ResponseEntity<ResponseDTO>(response, HttpStatus.OK);
-    }
-
-    /**
      * Method :- Method to Create the Employee Payroll Data.
      *
      * @param employeePayrollDTO :- passing employeePayrollDTO As Input.
