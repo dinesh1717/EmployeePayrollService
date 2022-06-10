@@ -22,6 +22,7 @@ public class EmployeePayrollApplication {
         log.info("Employee Payroll DB User is {}",
                 context.getEnvironment().getProperty("spring.datasource.username"));
 
+        //Method to configure Swagger
     }
     @Bean
     public Docket productApi() {

@@ -122,3 +122,8 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89) ~[spring-data-jpa-2.7.0.jar:2.7.0]
 	... 70 common frames omitted
 
+2022-06-10 13:21:41.873  INFO 16108 --- [main] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17.0.2 on RYZEN5 with PID 16108 (C:\Users\91879\IdeaProjects\EmployeePayroll\target\classes started by 91879 in C:\Users\91879\IdeaProjects\EmployeePayroll)
+2022-06-10 13:21:41.877 DEBUG 16108 --- [main] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-10 13:21:41.878  INFO 16108 --- [main] c.b.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
+2022-06-10 13:21:46.010  WARN 16108 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-10 13:21:46.954  INFO 16108 --- [main] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 5.575 seconds (JVM running for 6.33)
