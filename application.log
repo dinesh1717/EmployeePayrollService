@@ -127,3 +127,5 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2022-06-10 13:21:41.878  INFO 16108 --- [main] c.b.e.EmployeePayrollApplication         : The following 1 profile is active: "DEV"
 2022-06-10 13:21:46.010  WARN 16108 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2022-06-10 13:21:46.954  INFO 16108 --- [main] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 5.575 seconds (JVM running for 6.33)
+2022-06-10 13:21:46.959  INFO 16108 --- [main] c.b.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Environment
+2022-06-10 13:21:46.961  INFO 16108 --- [main] c.b.e.EmployeePayrollApplication         : Employee Payroll DB User is root
