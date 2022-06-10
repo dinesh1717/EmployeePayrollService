@@ -27,7 +27,7 @@ public class EmployeePayrollApplication {
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.bridgelabz.empPayrollServiceApp.EmpPayrollServiceApp"))
+                .apis(RequestHandlerSelectors.basePackage("com.bridgelabz.employeepayroll"))
                 .build();
     }
 }
